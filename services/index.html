@@ -1,0 +1,110 @@
+<!-- TEMPLATE: copy this and replace Services, PAGE_SLUG, GTM services built<br>for <em>real results.</em>, From full GTM strategy to outbound systems and sales process design. Everything your revenue engine needs. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Telos Advisory</title>
+<meta name="description" content="From full GTM strategy to outbound systems and sales process design. Everything your revenue engine needs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080A0F;--surface:#0E1117;--border:rgba(255,255,255,0.06);--blue:#2563EB;--blue-b:#3B82F6;--orange:#F97316;--white:#F1F3F7;--muted:rgba(241,243,247,0.45);--muted2:rgba(241,243,247,0.22);--charcoal:#12151C}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;min-height:100vh}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:9990;mix-blend-mode:overlay}
+.cur{position:fixed;width:8px;height:8px;background:var(--blue-b);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;mix-blend-mode:screen}
+.cur-r{position:fixed;width:32px;height:32px;border:1px solid rgba(59,130,246,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s,height .35s}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 60px;border-bottom:1px solid var(--border);background:rgba(8,10,15,0.88);backdrop-filter:blur(20px)}
+.logo{font-family:'Outfit',sans-serif;font-size:15px;font-weight:500;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:11px}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;font-weight:300}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{color:var(--white)!important;background:var(--blue);padding:10px 24px;border-radius:6px;transition:background .2s!important;font-weight:400!important}
+.nav-cta:hover{background:var(--blue-b)!important}
+.page-hero{min-height:52vh;display:flex;flex-direction:column;justify-content:flex-end;padding:160px 60px 80px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 20% 80%,black 5%,transparent 65%)}
+.og-l{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--orange) 50%,transparent);opacity:.35}
+.stag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:18px;font-weight:300}
+.page-title{font-family:'Outfit',sans-serif;font-size:clamp(52px,6vw,96px);font-weight:200;line-height:.96;letter-spacing:-.02em;color:var(--white);margin-bottom:24px}
+.page-title em{font-style:italic;color:var(--orange);font-weight:300}
+.page-sub{font-size:16px;line-height:1.8;color:var(--muted);max-width:520px;font-weight:300;letter-spacing:.01em}
+.coming-soon{padding:120px 60px;display:flex;flex-direction:column;align-items:flex-start;gap:32px;max-width:680px}
+.cs-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;border:1px solid rgba(249,115,22,0.3);padding:6px 16px;border-radius:4px;font-weight:300}
+.cs-headline{font-family:'Outfit',sans-serif;font-size:clamp(28px,3vw,46px);font-weight:200;color:var(--white);line-height:1.15;letter-spacing:-.02em}
+.cs-body{font-size:15px;line-height:1.9;color:var(--muted);font-weight:300;letter-spacing:.01em}
+.cs-body strong{color:var(--white);font-weight:400}
+.notify-form{display:flex;gap:12px;margin-top:8px}
+.notify-input{font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;background:var(--surface);border:1px solid var(--border);color:var(--white);padding:12px 20px;border-radius:6px;outline:none;transition:border-color .2s;width:280px}
+.notify-input::placeholder{color:var(--muted2)}
+.notify-input:focus{border-color:rgba(37,99,235,0.5)}
+.notify-btn{font-family:'Outfit',sans-serif;font-size:14px;font-weight:400;color:var(--white);background:var(--blue);padding:12px 24px;border-radius:6px;border:none;cursor:pointer;transition:background .2s;white-space:nowrap}
+.notify-btn:hover{background:var(--blue-b)}
+.back-link{font-size:13px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;font-weight:300;margin-top:16px}
+.back-link:hover{color:var(--white)}
+.back-link::before{content:'←';transition:transform .2s}
+.back-link:hover::before{transform:translateX(-4px)}
+footer{border-top:1px solid var(--border);padding:30px 60px;display:flex;justify-content:space-between;align-items:center;background:var(--charcoal);position:fixed;bottom:0;left:0;right:0}
+.flogo{font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.fcp{font-size:12px;color:var(--muted2);font-weight:300}
+.flinks{display:flex;gap:28px}
+.flinks a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;font-weight:300}
+.flinks a:hover{color:var(--white)}
+main{padding-bottom:100px}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="ring"></div>
+<nav>
+  <a href="/" class="logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="5" stroke="#2563EB" stroke-width="1.5"/><path d="M7 12h10M12 7v10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="#F97316"/></svg>
+    Telos Advisory
+  </a>
+  <ul class="nav-links">
+    <li><a href="/framework" class="">Framework</a></li>
+    <li><a href="/services" class="active">Services</a></li>
+    <li><a href="/case-studies" class="">Case Studies</a></li>
+    <li><a href="/blog" class="">Blog</a></li>
+    <li><a href="/contact" class="nav-cta">Let's talk</a></li>
+  </ul>
+</nav>
+<main>
+  <section class="page-hero">
+    <div class="hero-grid"></div>
+    <div class="og-l"></div>
+    <div class="stag">// services</div>
+    <h1 class="page-title">GTM services built<br>for <em>real results.</em></h1>
+    <p class="page-sub">From full GTM strategy to outbound systems and sales process design. Everything your revenue engine needs.</p>
+  </section>
+  <div class="coming-soon">
+    <div class="cs-badge">Coming soon</div>
+    <h2 class="cs-headline">This page is being built.<br>Check back shortly.</h2>
+    <p class="cs-body">We're putting this together properly. In the meantime, <strong>everything you need is on the homepage</strong> or just reach out directly.</p>
+    <a href="/" class="back-link">Back to homepage</a>
+  </div>
+</main>
+<footer>
+  <div style="display:flex;align-items:center;gap:28px">
+    <a href="/" class="flogo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="5" stroke="#2563EB" stroke-width="1.5"/><path d="M7 12h10M12 7v10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="#F97316"/></svg>Telos Advisory</a>
+    <span class="fcp">GTM strategy for ambitious B2B SaaS companies.</span>
+  </div>
+  <div class="flinks">
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="mailto:hello@telosadvisory.com">hello@telosadvisory.com</a>
+    <span class="fcp">© 2026</span>
+  </div>
+</footer>
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='46px';ring.style.height='46px';cur.style.transform='translate(-50%,-50%) scale(0)'});
+  el.addEventListener('mouseleave',()=>{ring.style.width='32px';ring.style.height='32px';cur.style.transform='translate(-50%,-50%) scale(1)'});
+});
+</script>
+</body>
+</html>
