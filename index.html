@@ -189,6 +189,29 @@ footer{border-top:1px solid var(--border);padding:30px 60px;display:flex;justify
 @keyframes fi{from{opacity:0}to{opacity:1}}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
+/* FRAMEWORK / WAYS OF WORKING */
+.fwk{padding:96px 60px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.fwk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:56px}
+.fwk-step{background:var(--bg);padding:44px 32px;position:relative;overflow:hidden;transition:background .3s;counter-increment:fwk}
+.fwk-step:hover{background:var(--surface)}
+.fwk-step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.25,.46,.45,.94)}
+.fwk-step:hover::before{transform:scaleX(1)}
+.fwk-num{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--blue-b);margin-bottom:16px}
+.fwk-title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:400;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
+.fwk-desc{font-size:13px;line-height:1.85;color:var(--muted);font-weight:300;letter-spacing:.01em}
+/* BLOG */
+.blog{padding:96px 60px;border-bottom:1px solid var(--border)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:56px}
+.blog-post{background:var(--bg);padding:44px 32px;position:relative;overflow:hidden;transition:background .3s}
+.blog-post:hover{background:var(--surface)}
+.blog-post::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+.blog-post:hover::before{transform:scaleX(1)}
+.blog-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:14px}
+.blog-title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:400;color:var(--white);margin-bottom:10px;letter-spacing:-.01em;line-height:1.35}
+.blog-excerpt{font-size:13px;line-height:1.85;color:var(--muted);font-weight:300;letter-spacing:.01em;margin-bottom:16px}
+.blog-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);letter-spacing:.05em}
+.blog-arrow{position:absolute;bottom:32px;right:32px;font-size:15px;color:rgba(255,255,255,0.08);transition:color .3s,transform .3s}
+.blog-post:hover .blog-arrow{color:var(--blue-b);transform:translate(3px,-3px)}
 /* MOBILE RESPONSIVE */
 @media(max-width:900px){
 nav{padding:16px 24px}
@@ -242,6 +265,11 @@ footer{flex-direction:column;gap:16px;padding:24px 28px;text-align:center}
 .sh{font-size:clamp(28px,7vw,42px)}
 .cur,.cur-r{display:none}
 body{cursor:auto}
+
+.fwk{padding:56px 24px}
+.fwk-steps{grid-template-columns:1fr}
+.blog{padding:56px 24px}
+.blog-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
 .hero-left{padding:100px 20px 36px}
@@ -317,7 +345,7 @@ footer{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
 <div class="cur-r" id="ring"></div>
 <nav>
 <a href="#" class="logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="5" stroke="#2563EB" stroke-width="1.5"/><path d="M7 12h10M12 7v10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="#F97316"/></svg>Telos Advisory</a>
-<ul class="nav-links"><li><a href="/framework">Framework</a></li><li><a href="/services">Services</a></li><li><a href="#case-studies">Case Studies</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact" class="nav-cta">Let's talk</a></li></ul>
+<ul class="nav-links"><li><a href="#framework">Framework</a></li><li><a href="#services">Services</a></li><li><a href="#case-studies">Case Studies</a></li><li><a href="#blog">Blog</a></li><li><a href="#contact" class="nav-cta">Let's talk</a></li></ul>
 </nav>
 <section class="hero">
 <canvas id="bg-canvas"></canvas><div class="hero-grid"></div><div class="og-streak"></div><div class="og-streak2"></div>
@@ -343,6 +371,17 @@ footer{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
 <section class="about" id="about">
 <div class="about-l rev"><div><div class="stag">// About</div><h2 class="sh">We don't do<br><em>generic</em> GTM.<br>We do yours.</h2></div><a href="#contact" class="btn-g" style="margin-top:48px;width:fit-content">Work with us</a></div>
 <div class="about-r rev rev-d2"><p class="abody">Telos Advisory works with B2B SaaS companies at every stage, from pre-PMF startups finding their first 10 customers to growth-stage companies scaling revenue engines and enterprises entering new markets.</p><p class="abody">We come from the field. <strong>8 years of sales, customer success, outbound, and pipeline</strong> built and run firsthand. That means we build strategies that actually get executed, not just decks that collect dust.</p><p class="abody">Every engagement starts with a clear diagnosis of where your GTM is breaking down and ends with a system that runs without us.</p></div>
+</section>
+
+<!-- FRAMEWORK / WAYS OF WORKING -->
+<section class="fwk" id="framework">
+<div class="rev"><div class="stag">// How we engage</div><h2 class="sh">From intro to <em>execution.</em></h2><p style="margin-top:14px;font-size:15px;color:var(--muted);font-weight:300;max-width:520px;line-height:1.8;letter-spacing:.01em">Every engagement follows the same disciplined process. No bloated retainers, no vague deliverables. You know exactly what happens at each step.</p></div>
+<div class="fwk-steps">
+<div class="fwk-step rev"><div class="fwk-num">01 —</div><div class="fwk-title">Intro Call</div><div class="fwk-desc">30-minute conversation. We learn about your business, your GTM motion, and where you are stuck. No pitch, just diagnosis. If there is a fit, we scope the engagement.</div></div>
+<div class="fwk-step rev rev-d1"><div class="fwk-num">02 —</div><div class="fwk-title">Context & Feedback</div><div class="fwk-desc">We collect everything: your data, your deck, your pipeline, your team structure. We review it, identify the gaps, and come prepared with a point of view before the workshop.</div></div>
+<div class="fwk-step rev rev-d2"><div class="fwk-num">03 —</div><div class="fwk-title">3-Hour Workshop</div><div class="fwk-desc">Hands-on working session. ICP, personas, sales methodology, channel strategy, and funnel design. You walk out with a minimal viable GTM strategy and clear task ownership.</div></div>
+<div class="fwk-step rev rev-d3"><div class="fwk-num">04 —</div><div class="fwk-title">Actions & Execution</div><div class="fwk-desc">You get a concrete action plan with owners and deadlines. We stay involved for partial execution: outbound setup, CRM configuration, messaging, or whatever the strategy requires.</div></div>
+</div>
 </section>
 <section class="bsec" id="bowtie">
 <div class="bsec-glow"></div><div class="bsec-og"></div><div class="bsec-og2"></div>
@@ -407,6 +446,16 @@ footer{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
 <div class="pstep rev rev-d1"><div class="pstep-emblem"><svg viewBox="0 0 44 44" fill="none" width="44" height="44"><rect x="6" y="6" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="16" x2="31" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="22" x2="26" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="28" x2="20" y2="28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="31" cy="28" r="4" stroke="currentColor" stroke-width="1.5"/><line x1="34.5" y1="31.5" x2="38" y2="35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="ptag">Design</div><div class="ptit">Build the strategy</div><div class="pdesc">Positioning, ICP, channels, qualification framework, and the systems to hold it all together, specific to your stage.</div></div>
 <div class="pstep rev rev-d2"><div class="pstep-emblem"><svg viewBox="0 0 44 44" fill="none" width="44" height="44"><path d="M8 22c0-7.7 6.3-14 14-14s14 6.3 14 14-6.3 14-14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 22l-4-4M8 22l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 22l3.5 3.5L27 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ptag">Deploy</div><div class="ptit">Execute together</div><div class="pdesc">We work alongside your team to implement, test, and iterate. We don't hand over a deck and disappear.</div></div>
 <div class="pstep rev rev-d3"><div class="pstep-emblem"><svg viewBox="0 0 44 44" fill="none" width="44" height="44"><polyline points="6,32 16,20 24,26 38,10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="30,10 38,10 38,18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="20" r="2.5" fill="currentColor" opacity=".6"/><circle cx="24" cy="26" r="2.5" fill="currentColor" opacity=".6"/><line x1="6" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".25"/></svg></div><div class="ptag">Scale</div><div class="ptit">Built to outlast us</div><div class="pdesc">Once the motion works, we build the infrastructure to scale it, tools, team structure, and feedback loops that run without us.</div></div>
+</div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+<div class="rev"><div class="stag">// Blog</div><h2 class="sh">Thinking out <em>loud.</em></h2></div>
+<div class="blog-grid">
+<div class="blog-post rev"><div class="blog-tag">Sales Methodology</div><div class="blog-title">The Greatest Sales Deck Structure You Will Ever Use</div><div class="blog-excerpt">Most sales decks start with the product. The best ones start with a shift in the world. Here is the 5-step narrative structure that turns prospects into buyers: observation, winners and losers, promised land, magic gifts, proof.</div><div class="blog-date">March 2026</div><div class="blog-arrow">&#8599;</div></div>
+<div class="blog-post rev rev-d1"><div class="blog-tag">GTM Strategy</div><div class="blog-title">Why Your First 10 Customers Should Be a Council, Not a Pipeline</div><div class="blog-excerpt">Stop treating early adopters as transactions. Build a Customer Leadership Council from day one. They shape your product, validate your pricing, and sell for you through referrals and case studies.</div><div class="blog-date">March 2026</div><div class="blog-arrow">&#8599;</div></div>
+<div class="blog-post rev rev-d2"><div class="blog-tag">Outbound</div><div class="blog-title">Cold Email is Not Dead. Your Copy Is.</div><div class="blog-excerpt">If your cold emails read like a marketing brochure, they belong in spam. The structure that works: opener (who you are, one line), reason (relevant to their situation), ask (one clear question). That is it.</div><div class="blog-date">March 2026</div><div class="blog-arrow">&#8599;</div></div>
 </div>
 </section>
 <section class="cta" id="contact">
